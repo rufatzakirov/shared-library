@@ -1,4 +1,4 @@
-#! /usr/bin/env groovy
+#!/usr/bin/env groovy
 def call(){
     withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'password', usernameVariable: 'username')]) {
         sh 'docker login -u $username -p $password'
